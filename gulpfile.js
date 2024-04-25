@@ -6,6 +6,7 @@ import {copy, copyImages, copySvg} from './gulp/copyAssets.mjs';
 import compileScripts from './gulp/compileScripts.mjs';
 import {optimizeSvg, sprite, createWebp, createAvif, optimizePng, optimizeJpg} from './gulp/optimizeImages.mjs';
 import pug from './gulp/compilePug.mjs';
+import ghPages from 'gulp-gh-pages';
 
 const server = browserSync.create();
 const streamStyles = () => compileStyles().pipe(server.stream());
@@ -45,5 +46,10 @@ const nomin = gulp.series(clean, copy, sprite, gulp.parallel(compileStyles, comp
 
 
 const optimize = gulp.series(gulp.parallel(optimizePng, optimizeJpg, optimizeSvg));
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+      .pipe(ghPages());
+});
 
 export {createWebp as webp, createAvif as avif, build, start, dev, nomin, optimize};
