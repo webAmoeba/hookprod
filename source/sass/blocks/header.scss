@@ -1,13 +1,9 @@
 .header {
-  padding: 28px 0;
-
-  background-color: $color-neon-blue;
+  padding: 36px 0;
 
   .container {
     display: flex;
-  }
-
-  &__logo {
-    color: $color-default-white;
+    justify-content: space-between;
+    align-items: center;
   }
 }

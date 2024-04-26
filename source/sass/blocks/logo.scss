@@ -1,0 +1,14 @@
+.logo {
+  width: 334px;
+  height: 64px;
+
+  line-height: 0;
+
+  background: url('../../img/svg/logo.svg') no-repeat left center;
+
+  @include vp-767 {
+    width: 64px;
+
+    background-image: url('../../img/svg/logo-mobile.svg');
+  }
+}

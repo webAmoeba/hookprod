@@ -83,6 +83,14 @@ block main
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
 
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn-user
+            +btn-user({text: "Текст"})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст"})
+
         //- Элементы форм
         section.uikit__section(id="forms")
           h2.uikit__h2 Элементы форм
