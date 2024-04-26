@@ -1,0 +1,36 @@
+.form-search {
+  .custom-input {
+    position: relative;
+  }
+
+  &__suggestions {
+    // display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 500;
+    list-style-type: none;
+    letter-spacing: 0.1px;
+
+    background-color: $color-default-white;
+    border-radius: 14px;
+
+    li {
+      padding: 11px 16px;
+
+      cursor: pointer;
+
+      @include hover-focus {
+        background-color: #f1f1f5;
+      }
+    }
+  }
+}

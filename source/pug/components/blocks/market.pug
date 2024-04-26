@@ -56,16 +56,18 @@ mixin market()
           button.btn(type='button', data-tabs='control') Вакансии
           button.btn(type='button', data-tabs='control') Резюме
 
-        form(action="https://echo.htmlacademy.ru/", method="get")
+        form(action="https://echo.htmlacademy.ru/", method="get", autocomplete="off").form-search
           .custom-input
             label
               span.visually-hidden Поиск
-              input(name="search", placeholder="Услуга или специалист", type="search")
+              input(name="search", placeholder="Услуга или специалист", type="search", id="input-search")
             button.btn.btn--big.is-active(type="submit") Найти
-          .suggests
-            button.suggest(type="button") Копирайтер
-            button.suggest(type="button") Создание гайдов
-            button.suggest(type="button") Курьер
+            ul.form-search__suggestions#search-list
+
+          .market__tags
+            button.tag(type="button") Копирайтер
+            button.tag(type="button") Создание гайдов
+            button.tag(type="button") Курьер
 
         .tabs__content(data-tabs='content')
           .tabs__element.market__cards(data-tabs='element')
