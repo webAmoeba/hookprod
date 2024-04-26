@@ -644,8 +644,37 @@ button,
 }
 
 .footer {
-  padding: 40px 0;
-  background-color: #2c39f2;
+  padding: 26px 0;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 400;
+  color: #911016;
+  letter-spacing: 0.36px;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__copy {
+  color: #948171;
+  letter-spacing: 0.66px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  list-style-type: none;
 }
 
 .btn {
@@ -683,7 +712,7 @@ button,
   align-items: center;
   padding: 12px 16px;
   line-height: 0;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
   background-color: #ffffff;
   border: none;
   border-radius: 16px;
@@ -715,15 +744,15 @@ button,
   content: "";
   width: 24px;
   height: 24px;
-  margin-left: 18px;
-  background: url("../../img/svg/v.svg") no-repeat center;
+  margin-left: 16px;
+  background: url("../img/svg/v.svg") no-repeat center;
 }
 
 .logo {
   width: 334px;
   height: 64px;
   line-height: 0;
-  background: url("../../img/svg/logo.svg") no-repeat left center;
+  background: url("../img/svg/logo.svg") no-repeat left center;
 }
 
 /* @mixin hover-focus {
@@ -786,7 +815,7 @@ button,
 
   .logo {
     width: 64px;
-    background-image: url("../../img/svg/logo-mobile.svg");
+    background-image: url("../img/svg/logo-mobile.svg");
   }
 }
 
