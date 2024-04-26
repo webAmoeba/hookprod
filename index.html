@@ -19,13 +19,10 @@
     <div class="wrapper">
       <header class="header">
         <div class="container"><a class="logo" href="index.html"><span class="visually-hidden">Переход на главную</span></a>
-          <button class="btn-user" type="button">
-            <div class="btn-user__avatar">
+          <button class="btn-user" type="button"><span class="btn-user__avatar">
               <svg width="24" height="24" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#user"></use>
-              </svg>
-            </div><span>Войти</span>
-          </button>
+              </svg></span><span>Войти</span></button>
         </div>
       </header>
       <main>
@@ -37,17 +34,18 @@
                 <button class="btn" type="button" data-tabs="control">Вакансии</button>
                 <button class="btn" type="button" data-tabs="control">Резюме</button>
               </div>
-              <form action="" method="get">
+              <form class="form-search" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
                 <div class="custom-input">
                   <label><span class="visually-hidden">Поиск</span>
-                    <input name="search" placeholder="Услуга или специалист" type="search">
-                    <button class="btn btn--big is-active" type="submit">Найти</button>
+                    <input name="search" placeholder="Услуга или специалист" type="search" id="input-search">
                   </label>
-                  <div class="suggests">
-                    <button class="suggest" type="button">Копирайтер</button>
-                    <button class="suggest" type="button">Создание гайдов</button>
-                    <button class="suggest" type="button">Курьер</button>
-                  </div>
+                  <button class="btn btn--big is-active" type="submit">Найти</button>
+                  <ul class="form-search__suggestions" id="search-list"></ul>
+                </div>
+                <div class="market__tags">
+                  <button class="tag" type="button">Копирайтер</button>
+                  <button class="tag" type="button">Создание гайдов</button>
+                  <button class="tag" type="button">Курьер</button>
                 </div>
               </form>
               <div class="tabs__content" data-tabs="content">

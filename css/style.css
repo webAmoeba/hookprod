@@ -441,6 +441,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+a.focus-visible:focus {
+  opacity: 0.9;
 }
 
 img,
@@ -822,7 +828,7 @@ button,
   margin-top: 114px;
 }
 
-.market .suggests {
+.market__tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -954,10 +960,6 @@ button,
 .custom-input,
 .custom-textarea {
   position: relative;
-}
-
-.custom-input label,
-.custom-textarea label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -967,19 +969,29 @@ button,
   align-items: stretch;
 }
 
-.custom-input label input,
-.custom-input label textarea,
-.custom-textarea label input,
-.custom-textarea label textarea {
+.custom-input label,
+.custom-textarea label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.custom-input input,
+.custom-input textarea,
+.custom-textarea input,
+.custom-textarea textarea {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  max-width: 100%;
   height: 70px;
   padding: 10px 20px;
   font-size: 18px;
   line-height: normal;
-  font-weight: 500;
+  font-weight: 700;
   vertical-align: middle;
+  color: #364670;
   letter-spacing: 0.1px;
   background-color: #ffffff;
   border: 2px solid #a68144;
@@ -988,46 +1000,50 @@ button,
   transition: opacity 0.3s ease;
 }
 
-.custom-input label input:hover,
-.custom-input label textarea:hover,
-.custom-textarea label input:hover,
-.custom-textarea label textarea:hover {
+.custom-input input:hover,
+.custom-input textarea:hover,
+.custom-textarea input:hover,
+.custom-textarea textarea:hover {
   opacity: 0.9;
 }
 
-.custom-input label input:focus,
-.custom-input label textarea:focus,
-.custom-textarea label input:focus,
-.custom-textarea label textarea:focus {
+.custom-input input:focus,
+.custom-input textarea:focus,
+.custom-textarea input:focus,
+.custom-textarea textarea:focus {
   outline: 1px solid #a68144;
   outline-offset: -4px;
 }
 
-.custom-input label input::-webkit-input-placeholder,
-.custom-input label textarea::-webkit-input-placeholder,
-.custom-textarea label input::-webkit-input-placeholder,
-.custom-textarea label textarea::-webkit-input-placeholder {
+.custom-input input::-webkit-input-placeholder,
+.custom-input textarea::-webkit-input-placeholder,
+.custom-textarea input::-webkit-input-placeholder,
+.custom-textarea textarea::-webkit-input-placeholder {
+  font-weight: 500;
   color: #92929d;
 }
 
-.custom-input label input::-moz-placeholder,
-.custom-input label textarea::-moz-placeholder,
-.custom-textarea label input::-moz-placeholder,
-.custom-textarea label textarea::-moz-placeholder {
+.custom-input input::-moz-placeholder,
+.custom-input textarea::-moz-placeholder,
+.custom-textarea input::-moz-placeholder,
+.custom-textarea textarea::-moz-placeholder {
+  font-weight: 500;
   color: #92929d;
 }
 
-.custom-input label input::-ms-input-placeholder,
-.custom-input label textarea::-ms-input-placeholder,
-.custom-textarea label input::-ms-input-placeholder,
-.custom-textarea label textarea::-ms-input-placeholder {
+.custom-input input::-ms-input-placeholder,
+.custom-input textarea::-ms-input-placeholder,
+.custom-textarea input::-ms-input-placeholder,
+.custom-textarea textarea::-ms-input-placeholder {
+  font-weight: 500;
   color: #92929d;
 }
 
-.custom-input label input::placeholder,
-.custom-input label textarea::placeholder,
-.custom-textarea label input::placeholder,
-.custom-textarea label textarea::placeholder {
+.custom-input input::placeholder,
+.custom-input textarea::placeholder,
+.custom-textarea input::placeholder,
+.custom-textarea textarea::placeholder {
+  font-weight: 500;
   color: #92929d;
 }
 
@@ -1104,15 +1120,9 @@ button,
 a.card {
   display: block;
   line-height: 0;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 
-a.card.focus-visible:focus {
-  opacity: 0.9;
-}
-
-.suggest {
+.tag {
   min-height: 36px;
   padding: 4px 12px;
   font-size: 18px;
@@ -1128,8 +1138,38 @@ a.card.focus-visible:focus {
   transition: opacity 0.3s ease;
 }
 
-.suggest.focus-visible:focus {
+.tag.focus-visible:focus {
   opacity: 0.9;
+}
+
+.form-search .custom-input {
+  position: relative;
+}
+
+.form-search__suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 500;
+  list-style-type: none;
+  letter-spacing: 0.1px;
+  background-color: #ffffff;
+  border-radius: 14px;
+}
+
+.form-search__suggestions li {
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
+.form-search__suggestions li.focus-visible:focus {
+  background-color: #f1f1f5;
 }
 
 /* @mixin hover-focus {
@@ -1231,7 +1271,7 @@ a.card.focus-visible:focus {
     margin-top: 50px;
   }
 
-  .market .suggests {
+  .market__tags {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1261,8 +1301,8 @@ a.card.focus-visible:focus {
     font-size: 36px;
   }
 
-  .custom-input label,
-  .custom-textarea label {
+  .custom-input,
+  .custom-textarea {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1272,10 +1312,10 @@ a.card.focus-visible:focus {
     align-items: center;
   }
 
-  .custom-input label input,
-  .custom-input label textarea,
-  .custom-textarea label input,
-  .custom-textarea label textarea {
+  .custom-input input,
+  .custom-input textarea,
+  .custom-textarea input,
+  .custom-textarea textarea {
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch;
@@ -1289,6 +1329,10 @@ a.card.focus-visible:focus {
   .card .title {
     margin-top: 12px;
   }
+
+  .form-search__suggestions {
+    top: 70px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1299,6 +1343,10 @@ a.card.focus-visible:focus {
 }
 
 @media (hover: hover) {
+  a:hover:not(.focus-visible) {
+    opacity: 0.9;
+  }
+
   .footer__link:hover:not(.focus-visible) {
     opacity: 0.9;
   }
@@ -1311,11 +1359,11 @@ a.card.focus-visible:focus {
     opacity: 0.9;
   }
 
-  a.card:hover:not(.focus-visible) {
+  .tag:hover:not(.focus-visible) {
     opacity: 0.9;
   }
 
-  .suggest:hover:not(.focus-visible) {
-    opacity: 0.9;
+  .form-search__suggestions li:hover:not(.focus-visible) {
+    background-color: #f1f1f5;
   }
 }
