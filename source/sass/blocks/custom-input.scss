@@ -2,57 +2,42 @@
 .custom-textarea {
   position: relative;
 
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px 0;
-    width: 100%;
-  }
-
   label {
     display: flex;
-    align-items: center;
-    width: 100%;
+    gap: 24px;
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
+    align-items: stretch;
 
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
+      height: 70px;
+      padding: 10px 20px;
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
+      font-size: 18px;
+      line-height: normal;
+      font-weight: 500;
+      vertical-align: middle;
+      letter-spacing: 0.1px;
+
+      background-color: $color-default-white;
+      border: 2px solid $color-gold;
+      border-radius: 14px;
 
       transition: border 0.3s ease;
 
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        opacity: 0.9;
       }
 
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        outline: 1px solid $color-gold;
+        outline-offset: -4px;
       }
-    }
-  }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
+      &::placeholder {
+        color: $color-placeholder;
+      }
     }
   }
 

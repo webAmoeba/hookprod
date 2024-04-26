@@ -3,14 +3,19 @@
   align-items: center;
   padding: 12px 16px;
 
-  line-height: 0;
-  letter-spacing: 0.6px;
+  line-height: normal;
+  color: $color-default-black;
+  letter-spacing: 0.2px;
 
   background-color: $color-default-white;
   border: none;
   border-radius: 16px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
   gap: 16px;
+
+  cursor: pointer;
+
+  transition: opacity $trans-default;
 
   &__avatar {
     display: flex;
@@ -19,8 +24,6 @@
     align-items: center;
     width: 36px;
     height: 36px;
-
-    line-height: 0;
 
     background-color: $color-gold;
     border-radius: 50%;
@@ -34,5 +37,15 @@
     margin-left: 16px;
 
     background: url("../img/svg/v.svg") no-repeat center;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.9;
   }
 }

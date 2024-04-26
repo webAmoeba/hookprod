@@ -1,0 +1,14 @@
+.tabs {
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__content {
+    transition: height 0.3s;
+  }
+
+  &__element {
+  }
+}

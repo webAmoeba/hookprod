@@ -1,0 +1,96 @@
+mixin market()
+  -
+    const cards_1 = [
+      {
+        pic: "copywriter",
+        alt: "Фото професии Копирайтер",
+        title: "Копирайтер",
+      },
+      {
+        pic: "mech",
+        alt: "Фото професии Механик",
+        title: "Механик",
+      },
+      {
+        pic: "cooker",
+        alt: "Фото професии Шеф-повар",
+        title: "Шеф-повар",
+      },
+      {
+        pic: "lower",
+        alt: "Фото професии Адвокат",
+        title: "Адвокат",
+      },
+    ]
+  -
+    const cards_2 = [
+      {
+        pic: "analyst",
+        alt: "Фото професии Аналитик",
+        title: "Аналитик",
+      },
+      {
+        pic: "accountant",
+        alt: "Фото професии Бухгалтер",
+        title: "Бухгалтер",
+      },
+      {
+        pic: "manager",
+        alt: "Фото професии Менеджер",
+        title: "Менеджер",
+      },
+      {
+        pic: "teacher",
+        alt: "Фото професии Преподаватель",
+        title: "Преподаватель",
+      },
+    ]
+  section.market
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h1.title.title--h1 Биржа вакансий и резюме
+
+      .tabs.no-transition-global(data-tabs='parent', data-delay='300')
+        .tabs__controls(data-tabs='controls')
+          button.btn(type='button', data-tabs='control') Вакансии
+          button.btn(type='button', data-tabs='control') Резюме
+
+        form(action="", method="get")
+          .custom-input
+            label
+              span.visually-hidden Поиск
+              input(name="search", placeholder="Услуга или специалист", type="search")
+              button.btn.btn--big.is-active(type="submit") Найти
+            .suggests
+              span.suggest Копирайтер
+              span.suggest Создание гайдов
+              span.suggest Курьер
+
+        .tabs__content(data-tabs='content')
+          .tabs__element.market__cards(data-tabs='element')
+            each card_1 in cards_1
+              article.card
+                +picture(
+                  "content/vacancies/list_1",
+                  card_1.pic,
+                  "jpg",
+                  300,
+                  142,
+                  card_1.alt
+                )
+                h2.title.title--h3!= card_1.title
+
+          .tabs__element.market__cards(data-tabs='element')
+            each card_2 in cards_2
+              article.card
+                +img(
+                  "content/vacancies/list_2",
+                  card_2.pic,
+                  "jpg",
+                  300,
+                  142,
+                  card_2.alt,
+                  false
+                )
+                h2.title.title--h3!= card_2.title
