@@ -25,10 +25,4 @@ a.card {
   display: block;
 
   line-height: 0;
-
-  transition: opacity $trans-default;
-
-  @include hover-focus {
-    opacity: 0.9;
-  }
 }

@@ -7,7 +7,7 @@ mixin btn-user(options = {})
   - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
 
   #{tag}.btn-user(href=href, target=target, rel=rel, type=type)&attributes(attributes)
-    .btn-user__avatar
+    span.btn-user__avatar
       +icon("user", 24, 24)
     span!= text
 
