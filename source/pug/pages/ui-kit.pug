@@ -18,16 +18,18 @@ block main
         div
           ul
             li
-              a(href="#modals") Модальные окна
+              a(href="#titles") Заголовки
             li
               a(href="#buttons") Кнопки
             li
               a(href="#forms") Элементы форм
+            li
+              a(href="#card") Карточка
 
       //----------------------------------------------
       .container
         a.uikit__header-link(href="sitemap.html")
-          img(src="https://via.placeholder.com/300x150", width="300", alt="Логотип проекта")
+          img(src="img/svg/logo.svg", width="300", alt="Логотип проекта")
         h1.uikit__h1 Компоненты, используемые на проекте
 
         section.uikit__section
@@ -40,23 +42,21 @@ block main
               code(class="language-pug").
                 p Пример кода
 
-        //- Модальные окна
-        section.uikit__section(id="modals")
-          h2.uikit__h2 Модальные окна
+        //- Заголовки
+        section.uikit__section(id="titles")
+          h2.uikit__h2 Заголовки
           .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--feedback
-            +btn({text: "modal-feedback"})(data-open-modal="feedback")
+            p.uikit__text.uikit__text--class .title \ .title--h1 \ .title--h3
+            div.titles
+              h2.title Обычный заголовок
+              h1.title.title--h1 Заголовок первого уровня
+              h3.title.title--h3 Заголовок третьего уровня
             pre
               |
               code(class="language-pug").
-                +btn({text: "modal-feedback"})(data-open-modal="feedback")
-          .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--success
-            +btn({text: "modal-success"})(data-open-modal="success")
-            pre
-              |
-              code(class="language-pug").
-                +btn({text: "modal-success"})(data-open-modal="success")
+                h2.title Обычный заголовок
+                h1.title.title--h1 Заголовок первого уровня
+                h3.title.title--h3 Заголовок третьего уровня
 
         //- Кнопки
         section.uikit__section(id="buttons")
@@ -69,12 +69,19 @@ block main
               code(class="language-pug").
                 +btn({text: "Текст", href: "#"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            p.uikit__text.uikit__text--class .btn \ .is-active
+            +btn({text: "Текст", href: "#", isExternal: true}).is-active(aria-label="Просто ссылка")
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+                +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").is-active
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .is-active \ .btn--big
+            +btn({text: "Крупная кнопка"}).is-active.btn--big
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Крупная кнопка"}).is-active.btn--big
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
             +btn({text: "Текст"})(disabled)
@@ -85,7 +92,7 @@ block main
 
           .uikit__component
             p.uikit__text.uikit__text--class .btn-user
-            +btn-user({text: "Текст"})(disabled)
+            +btn-user({text: "Текст"})
             pre
               |
               code(class="language-pug").
@@ -107,91 +114,36 @@ block main
                   inputLabel: "Введите ваше имя",
                   inputName: "user-name-1",
                 })
-          .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="tel"
-            +custom-input({
-              inputType: "tel",
-              inputLabel: "Введите номер телефона",
-              inputName: "user-phone",
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-input({
-                  inputType: "tel",
-                  inputLabel: "Введите номер телефона",
-                  inputName: "user-phone",
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="email"
-            +custom-input({
-              inputType: "email",
-              inputLabel: "Введите вашу почту",
-              inputName: "user-mail",
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-input({
-                  inputType: "email",
-                  inputLabel: "Введите вашу почту",
-                  inputName: "user-mail",
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class +custom-textarea \ default
-            +custom-textarea({
-              inputLabel: "Расскажите о себе",
-              inputName: "user-info"
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-textarea({
-                  inputLabel: "Расскажите о себе",
-                  inputName: "user-info"
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class +custom-toggle \ default
-            +custom-toggle({
-              inputLabel: "Чекбокс",
-              inputName: "user-agreement",
-              inputValue: "user-agreement-1",
-              inputChecked: false
-            }).custom-toggle--checkbox
-            pre
-              |
-              code(class="language-pug").
-                +custom-toggle({
-                  inputLabel: "Чекбокс",
-                  inputName: "user-agreement",
-                  inputValue: "user-agreement-1",
-                  inputChecked: false
-                }).custom-toggle--checkbox
 
-
+        //- Элементы форм
+        section.uikit__section(id="card")
+          h2.uikit__h2 Карточка
           .uikit__component
-            p.uikit__text Базовый селект c placeholder
-            p.uikit__text.uikit__text--class +custom-select \ default
-            +custom-select({
-              placeholder: "Выберите одну из опций",
-              error: "Выберите тему обращения",
-              optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-            })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1")
+            p.uikit__text.uikit__text--class .card
+            article.card
+              +picture(
+                "content/vacancies/list_1",
+                "mech",
+                "jpg",
+                300,
+                142,
+                "mech"
+              )
+              h2.title.title--h3 Заголовок карточки
             pre
               |
               code(class="language-pug").
-                +custom-select({
-                  placeholder: "Выберите одну из опций",
-                  error: "Выберите тему обращения",
-                  optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-                })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1")
+                article.card
+                  +picture(
+                    "content/vacancies/list_1",
+                    "mech",
+                    "jpg",
+                    300,
+                    142,
+                    "mech"
+                  )
+                  h2.title.title--h3 Заголовок карточки
 
 
   script
     include ../../js/inline/ui-kit.js
-
-block modals
-  +modal("modal--feedback")(data-modal="feedback")
-    +modal-feedback()
-  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
-    +modal-success()

@@ -9,5 +9,13 @@
   letter-spacing: 0.36px;
 
   background-color: #faf8f6;
+  border: none;
   border-radius: 100px;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
 }

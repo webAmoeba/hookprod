@@ -63,9 +63,9 @@ mixin market()
               input(name="search", placeholder="Услуга или специалист", type="search")
               button.btn.btn--big.is-active(type="submit") Найти
             .suggests
-              span.suggest Копирайтер
-              span.suggest Создание гайдов
-              span.suggest Курьер
+              button.suggest(type="button") Копирайтер
+              button.suggest(type="button") Создание гайдов
+              button.suggest(type="button") Курьер
 
         .tabs__content(data-tabs='content')
           .tabs__element.market__cards(data-tabs='element')

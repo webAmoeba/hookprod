@@ -6,6 +6,8 @@
 
   background: url("../img/svg/logo.svg") no-repeat left center;
 
+  transition: opacity $trans-default;
+
   @include vp-767 {
     width: 64px;
 
