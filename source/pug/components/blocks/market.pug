@@ -70,7 +70,8 @@ mixin market()
         .tabs__content(data-tabs='content')
           .tabs__element.market__cards(data-tabs='element')
             each card_1 in cards_1
-              article.card
+              a.card(href="#")
+                span.visually-hidden Ссылка на профессию
                 +picture(
                   "content/vacancies/list_1",
                   card_1.pic,
@@ -83,7 +84,8 @@ mixin market()
 
           .tabs__element.market__cards(data-tabs='element')
             each card_2 in cards_2
-              article.card
+              a.card(href="#")
+                span.visually-hidden Ссылка на профессию
                 +img(
                   "content/vacancies/list_2",
                   card_2.pic,

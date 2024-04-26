@@ -13,6 +13,7 @@
 
     @include vp-767 {
       flex-direction: column;
+      gap: 20px;
     }
   }
 
@@ -42,6 +43,14 @@
       @include vp-767 {
         text-align: left;
       }
+    }
+  }
+
+  &__link {
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.9;
     }
   }
 }
