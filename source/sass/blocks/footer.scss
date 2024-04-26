@@ -1,5 +1,29 @@
 .footer {
-  padding: 40px 0;
+  padding: 26px 0;
 
-  background-color: $color-neon-blue;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 400;
+  color: $color-red;
+  letter-spacing: 0.36px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__copy {
+    color: $color-brown;
+    letter-spacing: 0.66px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+
+    list-style-type: none;
+  }
 }

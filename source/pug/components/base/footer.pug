@@ -1,3 +1,20 @@
 mixin footer(footerMods)
+  -
+    const links = [
+      {
+        text: "Политика конфидециальности",
+        link: "#",
+      },
+      {
+        text: "Правовая информация",
+        link: "#",
+      },
+    ]
   footer.footer(class=footerMods)
     .container
+      span.footer__copy © 2023 Институт запусков
+      nav.footer__nav
+        ul.footer__list
+          each link in links
+            li.footer__item
+              a.footer__link(href=link.link)!= link.text
