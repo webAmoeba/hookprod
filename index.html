@@ -29,14 +29,68 @@
         </div>
       </header>
       <main>
-        <div class="intro">
+        <section class="market">
           <div class="container">
-            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
-            <p style="margin-top: 40px;">Пример использования +img()</p>
-            <p style="margin-bottom: 40px;"><img src="img/content/placeholder.png" srcset="img/content/placeholder@2x.png 2x" width="120" height="120" alt="Пример">
-            </p>
+            <h1 class="title title--h1">Биржа вакансий и резюме</h1>
+            <div class="tabs no-transition-global" data-tabs="parent" data-delay="300">
+              <div class="tabs__controls" data-tabs="controls">
+                <button class="btn" type="button" data-tabs="control">Вакансии</button>
+                <button class="btn" type="button" data-tabs="control">Резюме</button>
+              </div>
+              <form action="" method="get">
+                <div class="custom-input">
+                  <label><span class="visually-hidden">Поиск</span>
+                    <input name="search" placeholder="Услуга или специалист" type="search">
+                    <button class="btn btn--big is-active" type="submit">Найти</button>
+                  </label>
+                  <div class="suggests"><span class="suggest">Копирайтер</span><span class="suggest">Создание гайдов</span><span class="suggest">Курьер</span></div>
+                </div>
+              </form>
+              <div class="tabs__content" data-tabs="content">
+                <div class="tabs__element market__cards" data-tabs="element">
+                  <article class="card">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/vacancies/list_1/copywriter.webp, img/content/vacancies/list_1/copywriter@2x.webp 2x"><img src="img/content/vacancies/list_1/copywriter.jpg" srcset="img/content/vacancies/list_1/copywriter@2x.jpg 2x" width="300" height="142" alt="Фото професии Копирайтер">
+                    </picture>
+                    <h2 class="title title--h3">Копирайтер</h2>
+                  </article>
+                  <article class="card">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/vacancies/list_1/mech.webp, img/content/vacancies/list_1/mech@2x.webp 2x"><img src="img/content/vacancies/list_1/mech.jpg" srcset="img/content/vacancies/list_1/mech@2x.jpg 2x" width="300" height="142" alt="Фото професии Механик">
+                    </picture>
+                    <h2 class="title title--h3">Механик</h2>
+                  </article>
+                  <article class="card">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/vacancies/list_1/cooker.webp, img/content/vacancies/list_1/cooker@2x.webp 2x"><img src="img/content/vacancies/list_1/cooker.jpg" srcset="img/content/vacancies/list_1/cooker@2x.jpg 2x" width="300" height="142" alt="Фото професии Шеф-повар">
+                    </picture>
+                    <h2 class="title title--h3">Шеф-повар</h2>
+                  </article>
+                  <article class="card">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/vacancies/list_1/lower.webp, img/content/vacancies/list_1/lower@2x.webp 2x"><img src="img/content/vacancies/list_1/lower.jpg" srcset="img/content/vacancies/list_1/lower@2x.jpg 2x" width="300" height="142" alt="Фото професии Адвокат">
+                    </picture>
+                    <h2 class="title title--h3">Адвокат</h2>
+                  </article>
+                </div>
+                <div class="tabs__element market__cards" data-tabs="element">
+                  <article class="card"><img src="img/content/vacancies/list_2/analyst.jpg" width="300" height="142" alt="Фото професии Аналитик">
+                    <h2 class="title title--h3">Аналитик</h2>
+                  </article>
+                  <article class="card"><img src="img/content/vacancies/list_2/accountant.jpg" width="300" height="142" alt="Фото професии Бухгалтер">
+                    <h2 class="title title--h3">Бухгалтер</h2>
+                  </article>
+                  <article class="card"><img src="img/content/vacancies/list_2/manager.jpg" width="300" height="142" alt="Фото професии Менеджер">
+                    <h2 class="title title--h3">Менеджер</h2>
+                  </article>
+                  <article class="card"><img src="img/content/vacancies/list_2/teacher.jpg" width="300" height="142" alt="Фото професии Преподаватель">
+                    <h2 class="title title--h3">Преподаватель</h2>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container"><span class="footer__copy">© 2023 Институт запусков</span>
