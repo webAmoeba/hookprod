@@ -221,6 +221,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
               <ul>
                 <li><a href="#titles">Заголовки</a></li>
                 <li><a href="#buttons">Кнопки</a></li>
+                <li><a href="#tags">Теги</a></li>
                 <li><a href="#forms">Элементы форм</a></li>
                 <li><a href="#card">Карточка</a></li>
               </ul>
@@ -282,6 +283,22 @@ h3.title.title--h3 Заголовок третьего уровня
                       <use xlink:href="img/sprite.svg#user"></use>
                     </svg></span><span>Текст</span></button>
                 <pre><code class="language-pug">+btn({text: "Текст"})
+</code></pre>
+              </div>
+            </section>
+            <section class="uikit__section" id="tags">
+              <h2 class="uikit__h2">Теги</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.tag</p>
+                <div class="tags">
+                  <button class="tag" type="button">Копирайтер</button>
+                  <button class="tag" type="button">Создание гайдов</button>
+                  <button class="tag" type="button">Курьер</button>
+                </div>
+                <pre><code class="language-pug">.tags
+  button.tag(type="button") Копирайтер
+  button.tag(type="button") Создание гайдов
+  button.tag(type="button") Курьер
 </code></pre>
               </div>
             </section>

@@ -828,14 +828,8 @@ button,
   margin-top: 114px;
 }
 
-.market__tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.market .tags {
   margin-top: 16px;
-  gap: 16px;
 }
 
 .market__cards {
@@ -974,7 +968,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
+}
+
+.custom-input label .custom-input__label,
+.custom-textarea label .custom-input__label {
+  margin-bottom: 10px;
 }
 
 .custom-input input,
@@ -1120,6 +1123,15 @@ button,
 a.card {
   display: block;
   line-height: 0;
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .tag {
@@ -1271,12 +1283,6 @@ a.card {
     margin-top: 50px;
   }
 
-  .market__tags {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
   .market__cards {
     gap: 30px;
     display: -webkit-box;
@@ -1328,6 +1334,12 @@ a.card {
 
   .card .title {
     margin-top: 12px;
+  }
+
+  .tags {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .form-search__suggestions {
