@@ -5,7 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="ProjectName — описание">
+    <meta name="description" content="ProjectName — описание"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -259,6 +266,18 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
                 <p class="uikit__text uikit__text--class">.btn \ disabled \ button</p>
                 <button class="btn" type="button" disabled>Текст</button>
                 <pre><code class="language-pug">+btn({text: "Текст"})(disabled)
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn-user</p>
+                <button class="btn-user" type="button" disabled>
+                  <div class="btn-user__avatar">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#user"></use>
+                    </svg>
+                  </div><span>Текст</span>
+                </button>
+                <pre><code class="language-pug">+btn({text: "Текст"})
 </code></pre>
               </div>
             </section>

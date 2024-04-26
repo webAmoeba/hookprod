@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>ProjectName</title>
+    <title>Hook Production</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="ProjectName — описание">
+    <meta name="description" content="ProjectName — описание"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container"><span class="header__logo">Логотип</span>
-          <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-burger"></use>
+        <div class="container"><span class="logo"><span class="visually-hidden">Вы уже на главной странице</span></span>
+          <button class="btn-user" type="button">
+            <div class="btn-user__avatar">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#user"></use>
               </svg>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><span class="main-nav__link is-active">Главная</span>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 2</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 3</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+            </div><span>Войти</span>
+          </button>
         </div>
       </header>
       <main>
