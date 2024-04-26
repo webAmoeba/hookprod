@@ -23,15 +23,8 @@
     }
   }
 
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
+  .tags {
     margin-top: 16px;
-    gap: 16px;
-
-    @include vp-767 {
-      justify-content: center;
-    }
   }
 
   &__cards {

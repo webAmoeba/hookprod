@@ -1,3 +1,13 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include vp-767 {
+    justify-content: center;
+  }
+}
+
 .tag {
   min-height: 36px;
   padding: 4px 12px;

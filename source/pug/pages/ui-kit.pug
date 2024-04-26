@@ -22,6 +22,8 @@ block main
             li
               a(href="#buttons") Кнопки
             li
+              a(href="#tags") Теги
+            li
               a(href="#forms") Элементы форм
             li
               a(href="#card") Карточка
@@ -97,6 +99,23 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "Текст"})
+
+        //- Элементы форм
+        section.uikit__section(id="tags")
+          h2.uikit__h2 Теги
+          .uikit__component
+            p.uikit__text.uikit__text--class .tag
+            .tags
+              button.tag(type="button") Копирайтер
+              button.tag(type="button") Создание гайдов
+              button.tag(type="button") Курьер
+            pre
+              |
+              code(class="language-pug").
+                .tags
+                  button.tag(type="button") Копирайтер
+                  button.tag(type="button") Создание гайдов
+                  button.tag(type="button") Курьер
 
         //- Элементы форм
         section.uikit__section(id="forms")
