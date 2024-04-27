@@ -1182,6 +1182,15 @@ a.card {
 
 .form-search__suggestions li.focus-visible:focus {
   background-color: #f1f1f5;
+  outline: none;
+}
+
+.form-search__suggestions li.focus-visible:focus:first-child {
+  border-radius: 14px 14px 0 0;
+}
+
+.form-search__suggestions li.focus-visible:focus:last-child {
+  border-radius: 0 0 14px 14px;
 }
 
 /* @mixin hover-focus {
@@ -1377,5 +1386,14 @@ a.card {
 
   .form-search__suggestions li:hover:not(.focus-visible) {
     background-color: #f1f1f5;
+    outline: none;
+  }
+
+  .form-search__suggestions li:hover:not(.focus-visible):first-child {
+    border-radius: 14px 14px 0 0;
+  }
+
+  .form-search__suggestions li:hover:not(.focus-visible):last-child {
+    border-radius: 0 0 14px 14px;
   }
 }
