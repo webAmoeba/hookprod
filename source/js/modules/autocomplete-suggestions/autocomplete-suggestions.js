@@ -4,23 +4,25 @@ let suggestions = ['Reel maker', 'Reel съемка', 'Reel maker обучени
 let input = document.getElementById('input-search');
 let list = document.getElementById('search-list');
 
-input.addEventListener('keyup', () => {
-  removeElements();
+if (input && list) {
+  input.addEventListener('keyup', () => {
+    removeElements();
 
-  for (let i of suggestions) {
-    if (i.toLowerCase().startsWith(input.value.toLowerCase()) &&
-    input.value !== '') {
-      let listItem = document.createElement('li');
-      listItem.classList.add('form-search__suggestion-item');
-      listItem.addEventListener('click', () => displayNames(i));
-      listItem.setAttribute('data-value', i);
-      let word = '<b>' + i.substring(0, input.value.length) + '</b>';
-      word += i.substring(input.value.length);
-      listItem.innerHTML = word;
-      list.appendChild(listItem);
+    for (let i of suggestions) {
+      if (i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+      input.value !== '') {
+        let listItem = document.createElement('li');
+        listItem.classList.add('form-search__suggestion-item');
+        listItem.addEventListener('click', () => displayNames(i));
+        listItem.setAttribute('data-value', i);
+        let word = '<b>' + i.substring(0, input.value.length) + '</b>';
+        word += i.substring(input.value.length);
+        listItem.innerHTML = word;
+        list.appendChild(listItem);
+      }
     }
-  }
-});
+  });
+}
 
 function displayNames(value) {
   input.value = value;
