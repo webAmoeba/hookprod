@@ -1,5 +1,5 @@
 // mock
-let suggestions = ['Reel maker', 'Reel съемка', 'Reel maker обучение', 'Reel монтаж'];
+let suggestions = ['Reels maker', 'Reels съемка', 'Reels maker обучение', 'Reels монтаж'];
 
 let input = document.getElementById('input-search');
 let list = document.getElementById('search-list');
