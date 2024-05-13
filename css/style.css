@@ -804,12 +804,23 @@ button,
 }
 
 .logo {
-  width: 334px;
-  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 1px;
   line-height: 0;
-  background: url("../img/svg/logo.svg") no-repeat left center;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.logo__icon-mob {
+  display: none;
 }
 
 .market {
@@ -1281,8 +1292,15 @@ a.card {
   }
 
   .logo {
-    width: 64px;
-    background-image: url("../img/svg/logo-mobile.svg");
+    padding: 8px;
+  }
+
+  .logo__icon-mob {
+    display: block;
+  }
+
+  .logo__icon {
+    display: none;
   }
 
   .market {
