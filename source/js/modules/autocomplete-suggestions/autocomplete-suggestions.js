@@ -3,6 +3,7 @@ let suggestions = [
   'abuse', 'abricose',
   'banana', 'band',
   'cindicat', 'candy',
+  'duck', 'dolphin',
   'eford', 'elfy',
   'full', 'factory',
   'gehesys', 'generation',
